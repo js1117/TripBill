@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TripNote"></activity>
+        <activity android:name=".TripNote1Activity" />
+        <activity android:name=".TripNote2Activity"></activity>
     </application>
 
 </manifest>
