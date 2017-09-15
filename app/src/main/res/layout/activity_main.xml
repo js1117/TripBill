@@ -9,35 +9,25 @@
     tools:context="com.shinhan.tripbill.MainActivity">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="10"
-        android:orientation="horizontal"
-        android:weightSum="100">
-
+        android:layout_weight="10">
         <Button
             android:id="@+id/button"
-            android:layout_width="48dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="10"
+            android:layout_alignParentLeft="true"
             android:text="Menu" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="80"
-            android:text="TextView" />
-
         <Button
             android:id="@+id/button2"
-            android:layout_width="48dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="10"
+            android:layout_alignParentRight="true"
             android:text="Set" />
-    </LinearLayout>
-
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,6 +53,22 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="40"
+        android:layout_weight="20"
         android:background="@drawable/f150" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:weightSum="100">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="노트 추가" />
+    </RelativeLayout>
+
 </LinearLayout>
