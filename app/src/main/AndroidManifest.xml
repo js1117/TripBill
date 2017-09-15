@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".TripNote1Activity" />
         <activity android:name=".TripNote2Activity" />
-        <activity android:name=".ExpenseActivity"></activity>
+        <activity android:name=".ExpenseActivity" />
+        <activity android:name=".BoardActivity"></activity>
     </application>
 
 </manifest>
