@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="100"
-    tools:context="com.shinhan.tripbill.BoardActivity">
+    tools:context="com.shinhan.tripbill.MapActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,5 +28,18 @@
             android:layout_alignParentRight="true"
             android:text="Set" />
     </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="90">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="사진위치 지도 연동" />
+    </FrameLayout>
 
 </LinearLayout>
