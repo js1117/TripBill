@@ -35,14 +35,18 @@
         android:layout_weight="60"
         android:weightSum="100"
         android:orientation="horizontal">
+
         <TextView
+            android:id="@+id/textView4"
+            android:onClick="note1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="50"
-            android:background="#0000ff"/>
+            android:background="#0000ff" />
 
         <TextView
             android:id="@+id/textView"
+            android:onClick="note2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="50"

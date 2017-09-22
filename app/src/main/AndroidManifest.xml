@@ -20,7 +20,11 @@
         <activity android:name=".TripNote2Activity" />
         <activity android:name=".ExpenseActivity" />
         <activity android:name=".BoardActivity" />
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".MapActivity" />
+        <activity
+            android:name=".NavTestActivity"
+            android:label="@string/title_activity_nav_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
