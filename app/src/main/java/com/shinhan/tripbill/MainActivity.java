@@ -1,6 +1,7 @@
 package com.shinhan.tripbill;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
@@ -16,7 +17,6 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,18 +26,23 @@ public class MainActivity extends AppCompatActivity {
     GridView gridView;
     SingerAdapter adapter;
 
+    //SQLiteDatabase sqliteDB ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // DB 초기화
+        //sqliteDB = init_database() ;
+
         gridView = (GridView) findViewById(R.id.gridView);
 
         adapter = new SingerAdapter();
 
-        adapter.addItem(new SingerItem("Group1", "010-0000-0000", 20, R.drawable.f150));
-        adapter.addItem(new SingerItem("Group2", "010-0000-0000", 20, R.drawable.f150));
-        adapter.addItem(new SingerItem("Group3", "010-0000-0000", 20, R.drawable.f150));
+        adapter.addItem(new SingerItem("일본", "9/1 ~ 9/3", 1, R.drawable.japan));
+        adapter.addItem(new SingerItem("미국", "10/11 ~ 10/20", 2, R.drawable.usa));
+        adapter.addItem(new SingerItem("영국", "11/1 ~ 11/10", 3, R.drawable.england));
 
         gridView.setAdapter(adapter);
 
@@ -48,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String name = editText.getText().toString();
-                String mobile = "010-2000-3000";
-                int age = 20;
+                String mobile = "00";
+                int age = 4;
 
-                adapter.addItem(new SingerItem(name, mobile, age, R.drawable.f150));
+                adapter.addItem(new SingerItem(name, mobile, age, R.drawable.travel));
                 adapter.notifyDataSetChanged();
             }
         });
@@ -60,8 +65,15 @@ public class MainActivity extends AppCompatActivity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                SingerItem item = (SingerItem) adapter.getItem(position);
-                Toast.makeText(getApplicationContext(), "선택 : " + item.getName(), Toast.LENGTH_LONG).show();
+                //SingerItem item = (SingerItem) adapter.getItem(position);
+                //Toast.makeText(getApplicationContext(), "선택 : " + item.getName(), Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(
+                        getApplicationContext(), // 현재화면의 제어권자
+                        TripNote1Activity.class); // 다음넘어갈 화면
+
+                startActivity(intent);
+
             }
         });
     }
@@ -187,4 +199,27 @@ public class MainActivity extends AppCompatActivity {
             return view;
         }
     }
+
+    /*
+    private SQLiteDatabase init_database() {
+
+        SQLiteDatabase db = null ;
+        // File file = getDatabasePath("contact.db") ;
+        File file = new File(getFilesDir(), "contact.db") ;
+
+        System.out.println("PATH : " + file.toString()) ;
+        try {
+            db = SQLiteDatabase.openOrCreateDatabase(file, null) ;
+        } catch (SQLiteException e) {
+            e.printStackTrace() ;
+        }
+
+        if (db == null) {
+            System.out.println("DB creation failed. " + file.getAbsolutePath()) ;
+        }
+
+        return db ;
+    }
+     */
+
 }

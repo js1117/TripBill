@@ -13,39 +13,45 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/lvbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_weight="10"
-            android:text="Back" />
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="10"
-            android:layout_alignParentRight="true"
-            android:text="Set" />
+            android:text="조회" />
+
     </RelativeLayout>
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="aaaa"
+        android:textColor="#ff000000"
+        android:textSize="16dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <ScrollView
+        android:id="@+id/scroll01"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff" >
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/text01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="bbb"
+            android:textColor="#ff000000"
+            android:textSize="14dp" />
+    </ScrollView>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    <ListView
+        android:id="@+id/list01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/scroll01"
+        android:background="#ffffff" >
+    </ListView>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
 </LinearLayout>

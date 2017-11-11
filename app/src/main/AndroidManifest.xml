@@ -24,7 +24,8 @@
         <activity
             android:name=".NavTestActivity"
             android:label="@string/title_activity_nav_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".TripNote3Activity"></activity>
     </application>
 
 </manifest>
